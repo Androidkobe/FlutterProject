@@ -30,14 +30,23 @@ class ContentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        Text.rich(TextSpan(children: [
-          TextSpan(text: "定风波"),
-          TextSpan(text: "苏轼"),
-          TextSpan(text: "\n一蓑烟雨任平生",style: TextStyle(color: Colors.red,fontSize: 39),)
-        ]),
-        textAlign:TextAlign.center,
-        style: TextStyle(fontSize: 20),
+      children: [
+        RaisedButton(
+          textColor: Colors.red,
+          color: Colors.amber,
+          onPressed: () => {
+            //按钮点击
+          },
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.people,color: Colors.white,size: 50,),
+              SizedBox(width:10),
+              Text("按钮")
+            ],
+          ),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         )
       ],
     );
